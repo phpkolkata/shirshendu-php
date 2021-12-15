@@ -1,0 +1,13 @@
+.box {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: lightgreen;
+  overflow: auto;
+}
+.box2 {
+  border: 1px solid black;
+  width: 200px;
+  background-color: lightgreen;
+  padding: 10px;
+}

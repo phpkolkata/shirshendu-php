@@ -5,19 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- internal / inDocument css -->
     <style>
       .box {
         border: 1px solid black;
         width: 200px;
         height: 200px;
-        background-color: lightgreen;
+        /* background-color: lightgreen; */
         overflow: auto;
       }
       .box2 {
         border: 1px solid black;
         width: 200px;
-        background-color: lightgreen;
+        /* background-color: lightgreen; */
         padding: 10px;
+      }
+
+      /* parallel css, more than one at a time */
+      div,
+      p,
+      .box2 {
+        /* background-color: #f00; */
+        font-size: 20px;
+      }
+      /* p {
+        background-color: red;
+      } */
+
+      /* div is father, b is direct child of div */
+      div > b {
+        color: red;
+      }
+
+      .box2 b {
+        color: #00f;
+      }
+      /* div can be either father or grand grand father chain, so b will always be red in div */
+      div b {
+        color: red;
       }
     </style>
   </head>
@@ -25,19 +50,23 @@
     <div class="box">
       Hello this is my first css class and i m enjoying it Hello this is my
       first Hello this is my first css class and i m enjoying it Hello this is
-      my first Hello this is my first css class and i m enjoying it Hello this
-      is my first Hello this is my first css class and i m enjoying it Hello
-      this is my first Hello this is my first css class and i m enjoying it
-      Hello this is my first
+      my first Hello this is my first
+      <p><b>bold data 1</b></p>
+      css class and i m enjoying it Hello this is my first Hello this is my
+      first css class and i m enjoying it Hello this is my first Hello this
+      <b>bold data</b> is my first css class and i m enjoying it Hello this is
+      my first
     </div>
+    <p>hello this is a paragraph <b>bold data</b></p>
     <hr />
     <div class="box2">
       Hello this is my first css class and i m enjoying it Hello this is my
       first Hello this is my first css class and i m enjoying it Hello this is
-      my first Hello this is my first css class and i m enjoying it Hello this
-      is my first Hello this is my first css class and i m enjoying it Hello
-      this is my first Hello this is my first css class and i m enjoying it
-      Hello this is my first
+      my first Hello this is my <b>bold data</b> first css class and i m
+      enjoying it Hello this is my first Hello this is my first css class and i
+      m enjoying it Hello this is my first Hello this <b>bold data</b> is my
+      first css class and i m enjoying it Hello this is my first
     </div>
+    <b>bold data</b>
   </body>
 </html>
