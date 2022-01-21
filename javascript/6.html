@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function sayHello() {
+        var nm = document.getElementById("nm");
+        var age = document.getElementById("age");
+        var m = document.getElementById("m");
+        var f = document.getElementById("f");
+
+        // alert(m.checked);
+
+        if (nm.value == "") {
+          alert("please enter your name");
+        } else if (nm.value.length < 3 || nm.value.length > 10) {
+          alert("please enter name within 3-10 chars");
+        } else if (age.value == "") {
+          alert("please enter your age ");
+        } else if (isNaN(age.value)) {
+          alert("please enter your age in numbers");
+        } else if (age.value < 18 || age.value > 35) {
+          alert("please enter your age in limit 18-35 ");
+        } else if (m.checked == false && f.checked == false) {
+          alert("please select gender");
+        } else {
+          alert("thank you");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Name:<input type="text" id="nm" /> (3-10 chars)<br />
+    Age:<input type="text" id="age" />(18-35)<br />
+    Gender:
+    <input type="radio" name="gender" value="male" id="m" /> Male
+    <input type="radio" name="gender" value="female" id="f" /> Female
+    <br />
+    <button onclick="sayHello()">Click</button>
+  </body>
+</html>
