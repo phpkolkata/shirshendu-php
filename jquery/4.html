@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function hide(para) {
+        var p = document.getElementById(para);
+
+        if (p.style.display == "none") {
+          p.style.display = "block";
+        } else {
+          p.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 onclick="hide('p1')">Heading One</h1>
+    <p id="p1">
+      hello this is my first class on jquery, and i m bit confused, no worries,
+      human can learn by practice. hello this is my first class on jquery, and i
+      m bit confused, no worries, human can learn by practice. hello this is my
+      first class on jquery, and i m bit confused, no worries, human can learn
+      by practice. hello this is my first class on jquery, and i m bit confused,
+      no worries, human can learn by practice.
+    </p>
+    <h1 onclick="hide('p2')">Heading Two</h1>
+    <p id="p2">
+      hello this is my first class on jquery, and i m bit confused, no worries,
+      human can learn by practice. hello this is my first class on jquery, and i
+      m bit confused, no worries, human can learn by practice. hello this is my
+      first class on jquery, and i m bit confused, no worries, human can learn
+      by practice. hello this is my first class on jquery, and i m bit confused,
+      no worries, human can learn by practice.
+    </p>
+  </body>
+</html>

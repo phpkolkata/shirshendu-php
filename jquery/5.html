@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Heading One</h1>
+    <p>
+      hello this is my first class on jquery, and i m bit confused, no worries,
+      human can learn by practice. hello this is my first class on jquery, and i
+      m bit confused, no worries, human can learn by practice. hello this is my
+      first class on jquery, and i m bit confused, no worries, human can learn
+      by practice. hello this is my first class on jquery, and i m bit confused,
+      no worries, human can learn by practice.
+    </p>
+    <h1>Heading Two</h1>
+    <p>
+      hello this is my first class on jquery, and i m bit confused, no worries,
+      human can learn by practice. hello this is my first class on jquery, and i
+      m bit confused, no worries, human can learn by practice. hello this is my
+      first class on jquery, and i m bit confused, no worries, human can learn
+      by practice. hello this is my first class on jquery, and i m bit confused,
+      no worries, human can learn by practice.
+    </p>
+
+    <script src="jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("p").hide();
+        $("h1").click(function () {
+          //   $(this).next().hide();
+          $(this).next().show();
+        });
+      });
+    </script>
+  </body>
+</html>
