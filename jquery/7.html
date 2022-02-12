@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box">
+      <b>bold1</b>
+      <b>bold2</b>
+
+      <p>
+        <b>bold3</b>
+      </p>
+    </div>
+
+    <div>
+      <b>bold1</b>
+      <b>bold2</b>
+
+      <p>
+        <b>bold3</b>
+      </p>
+    </div>
+    <p>
+      <b>bold4</b>
+      <b>bold5</b>
+      <b>bold6</b>
+    </p>
+
+    <b>bold7</b>
+    <b id="bld">bold8</b>
+
+    <input type="text" id="nm" />
+
+    <script src="jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        // $("*").hide();
+        // $(".abc, #box, div");
+        // $("tr:even").css("background-color", "grey");
+        // $("p:last-child").css("background-color", "grey");
+        $("#box > b").css("background-color", "grey");
+
+        $("#nm").change(function () {
+          alert("test");
+        });
+
+        $("#bld").mouseenter(function () {
+          $("#bld").css("color", "red");
+        });
+        $("#bld").mouseleave(function () {
+          $("#bld").css("color", "black");
+        });
+      });
+    </script>
+  </body>
+</html>
