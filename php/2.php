@@ -12,11 +12,16 @@
 // $x = "abc"; // string 
 
 
+
 $x = 10;
 $y = 20;
 $z = $x + $y;
 
-print $z;
+print "<b>$z</b>";
+echo "<b>", $z, "</b>";
+
+// print "test","dd";
+echo "test","dd";
 
 // home work - 
 // run php 
