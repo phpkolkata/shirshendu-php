@@ -1,5 +1,6 @@
 <?php
 // functions - set of code, set of rule
+// function makes code smaller and helps to reuse
 // user defined function and pre defined function
 
 function hello($nm){
@@ -21,7 +22,18 @@ function counter(){
 
 counter();
 
+//-------------------------------------
 $str = "Hello";
 echo lcfirst($str);
 echo ucfirst("abc");
+
+echo "<br>test - ". md5("test");
+echo "<br>test - ". md5("test");
+
+echo trim(" hello ");
+
+$text = "hello india";
+$text = str_replace("india", "world", $text);
+echo $text;
+ 
 
