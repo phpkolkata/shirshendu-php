@@ -76,7 +76,6 @@ function calculate($v1,$v2,$act="add"){
     else if($act == "div"){
         return $v1/$v2;
     }
-    
 }
 
 print "<hr>";
