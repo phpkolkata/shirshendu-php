@@ -2,11 +2,11 @@
 
 $p_22 = array("name"=>"raj", "age"=>4);
 $a_22 = array("class"=>5, "sec"=>"A");
-$roll_22 = array("personal"=>$p_22, "academic"=>$a_22); //$V
+$roll_22 = array("personal"=>$p_22, "academic"=>$a_22); //$v
 
 $p_35 = array("name"=>"suman", "age"=>6);
 $a_35 = array("class"=>5, "sec"=>"B");
-$roll_35 = array("personal"=>$p_35, "academic"=>$a_35); //$V
+$roll_35 = array("personal"=>$p_35, "academic"=>$a_35); //$v
 
 $std = array("22"=>$roll_22, "35"=>$roll_35);
 
