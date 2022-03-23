@@ -7,3 +7,5 @@ print_r($_GET);
 print "POST";
 print "<pre>";
 print_r($_POST);
+
+echo $_GET['name'];
