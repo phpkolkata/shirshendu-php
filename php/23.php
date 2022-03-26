@@ -7,6 +7,8 @@
 // $age = $_POST['age'];
 // echo "hello ",$nm," your age is ",$age;
 
+
+
 print "request";
 print_r($_REQUEST);
 print "<br>";
