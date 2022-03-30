@@ -1,9 +1,7 @@
-
 <?php
 if(isset($_REQUEST['msg']))
 echo "<div style='color:red'> $_REQUEST[msg] </div>";
 ?>
-
 
 
 
@@ -15,3 +13,4 @@ Image:<input type="file" name="im"><br>
 
 <button>Submit</button>
 </form>
+
