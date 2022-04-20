@@ -1,8 +1,36 @@
 <?php
-
 require("db-connect.php");
 
-$sql = "SELECT * FROM `category`"; //table name and column name must be wraped with `` and value with '' 
+// search
+$where = "";
+extract($_POST);
+if(isset($srch)){
+    $where = " Where name like '%$srch%'";
+}
+// end search
+
+
+// count records
+$sql = "SELECT * FROM `category` $where";
+$res = mysqli_query($con, $sql);
+$total = mysqli_num_rows($res);
+// echo $total;
+
+
+
+
+$start = 0;
+$limit = 2;
+$pages = ceil($total / $limit); //upword round figure by ceil funciton
+
+if(isset($_REQUEST['p'])){
+    $start = ($_REQUEST['p'] - 1) * $limit;
+}
+
+
+
+
+$sql = "SELECT * FROM `category` $where LIMIT $start,$limit"; //Limit start,steps  0,2 - 2,2 - 4,2 - 6-2
 $res = mysqli_query($con, $sql);
 
 if(isset($_REQUEST['msg'])){
@@ -10,6 +38,14 @@ if(isset($_REQUEST['msg'])){
 }
 
 print "<a href='add-cat.php'>add more...</a>";  
+
+
+// search
+
+print"<form action='' method='post'>Search:<input type='text' name='srch'><input type='submit' value='Search'>";
+
+// search end
+
 
 print "<table border='1' width='300'>
         <tr>
@@ -34,3 +70,9 @@ while($row = mysqli_fetch_assoc($res)){
 }
 
 print "</table>";
+
+print"<hr>";
+
+for($i=1;$i<=$pages;$i++){
+    echo "<a href='?p=$i'>$i</a> | ";
+}
