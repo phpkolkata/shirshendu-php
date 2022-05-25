@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    Email: <input type="text" id="em" /> <span id="msg"></span>
+    <br />
+    <!-- <input type="button" value="check" id="btn" /> -->
+
+    <script>
+      $(document).ready(function () {
+        $("#em").keyup(function () {
+          //   alert($("#em").val());
+          $.ajax({
+            url: "check.php",
+            method: "post",
+            data: {
+              em: $("#em").val(),
+            },
+            success: function (data) {
+              if (data == 1) {
+                $("#msg").html("already exists!");
+                $("#msg").css("color", "red");
+              } else {
+                $("#msg").html("you can use it");
+                $("#msg").css("color", "green");
+              }
+            },
+            error: function (e) {
+              alert(e);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
